@@ -1,0 +1,20 @@
+{
+    "project-info": [
+        "KidCapture.json",
+        "LMSlecDownloader.json",
+        "logistics-management-system.json",
+        "mju-database-course-project.json",
+        "MJUClassRoomRsvn.json",
+        "MJUcovidDiagnosisMacro.json",
+        "Ucam.json"
+    ],
+    "project-details": [
+        "KidCapture.html",
+        "LMSlecDownloader.html",
+        "logistics-management-system.html",
+        "mju-database-course-project.html",
+        "MJUClassRoomRsvn.html",
+        "MJUcovidDiagnosisMacro.html",
+        "Ucam.html"
+    ]
+}
