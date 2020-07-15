@@ -1,0 +1,26 @@
+{
+  "name": "13circle.github.io",
+  "version": "1.0.0",
+  "description": "My Portfolio",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/13circle/13circle.github.io.git"
+  },
+  "author": "Jooho Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/13circle/13circle.github.io/issues"
+  },
+  "homepage": "https://github.com/13circle/13circle.github.io#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "fs": "0.0.1-security"
+  }
+}
