@@ -1,0 +1,9 @@
+{
+    "project-filename": "LMSlecDownloader.json",
+    "project-title": "LMSlecDownloader",
+    "project-date": "2020.06 ~",
+    "project-desc": "명지대학교 LMS 강의 영상 다운로더",
+    "project-tag": "#Node.js #Puppeteer",
+    "project-github-link": "https://github.com/13circle/LMSlecDownloader.git",
+    "project-page-link": "projects.html?LMSlecDownloader"
+}

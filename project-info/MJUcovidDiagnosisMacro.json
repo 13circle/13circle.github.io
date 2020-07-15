@@ -1,0 +1,9 @@
+{
+    "project-filename": "MJUcovidDiagnosisMacro.json",
+    "project-title": "MJUcovidDiagnosisMacro",
+    "project-date": "2020.06 ~",
+    "project-desc": "명지대학교 코로나 진단서 작성 매크로",
+    "project-tag": "#Node.js #Express #Puppeteer #귀차니즘",
+    "project-github-link": "https://github.com/13circle/MJUcovidDiagnosisMacro.git",
+    "project-page-link": "projects.html?MJUcovidDiagnosisMacro"
+}
