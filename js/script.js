@@ -97,72 +97,86 @@ function includeHTML(project_dir, attr, initCallback) {
 }
 
 function renderProjectView() {
-    var project_dir = './project-info/', breakpt = 3;
+    var project_dir = 'project-info', breakpt = 3;
     var card_list = document.querySelector('.project-card-list');
-    var row, rows;
+    var row, rows, configXHR, projectConfig, json_names;
     if(card_list) {
         row = document.createElement('div');
         row.className = 'row';
         card_list.appendChild(row);
         rows = card_list.querySelectorAll('.row');
-        $.getJSON(project_dir, json_names => {
-            for(var i = 0, xhr, div, jsons = []; i < json_names.length; i++) {
-                xhr = getXHR(function() {
-                    if(this.readyState == 4) {
-                        if(this.status == 200) {
-                            jsons.push(this.responseText);
-                            if(jsons.length == json_names.length) {
-                                jsons = sortJSONarr(jsons);
-                                jsons.forEach((json, json_index) => {
-                                    div = document.createElement('div');
-                                    div.setAttribute('template', 'project-card');
-                                    div.setAttribute('my-json-data', json);
-                                    div.className = 'col-lg-4 mb-4';
-                                    rows[rows.length - 1].innerHTML += div.outerHTML;
-                                    if((json_index + 1) % breakpt == 0) {
-                                        row = document.createElement('div');
-                                        row.className = 'row';
-                                        card_list.appendChild(row);
-                                        rows = card_list.querySelectorAll('.row');
+        configXHR = getXHR(function() {
+            if(this.readyState == 4) {
+                if(this.status == 200) {
+                    projectConfig = JSON.parse(this.responseText);
+                    json_names = projectConfig[project_dir];
+                    for(var i = 0, xhr, div, jsons = []; i < json_names.length; i++) {
+                        xhr = getXHR(function() {
+                            if(this.readyState == 4) {
+                                if(this.status == 200) {
+                                    jsons.push(this.responseText);
+                                    if(jsons.length == json_names.length) {
+                                        jsons.forEach((json, json_index) => {
+                                            div = document.createElement('div');
+                                            div.setAttribute('template', 'project-card');
+                                            div.setAttribute('my-json-data', json);
+                                            div.className = 'col-lg-4 mb-4';
+                                            rows[rows.length - 1].innerHTML += div.outerHTML;
+                                            if((json_index + 1) % breakpt == 0) {
+                                                row = document.createElement('div');
+                                                row.className = 'row';
+                                                card_list.appendChild(row);
+                                                rows = card_list.querySelectorAll('.row');
+                                            }
+                                        });
                                     }
-                                });
+                                }
                             }
-                        }
+                        });
+                        xhr.open('GET', project_dir + '/' + json_names[i], true);
+                        xhr.send();
                     }
-                });
-                xhr.open('GET', project_dir + '/' + json_names[i], true);
-                xhr.send();
+                }
             }
         });
+        configXHR.open('GET', 'project-config.json', true);
+        configXHR.send();
     }
 }
 
 function renderProjectMenu() {
-    var project_dir = './project-info/';
+    var project_dir = 'project-info';
     var project_menu = document.querySelector('.project-menu');
-    var xhr, json, a, jsons = [];
-    $.getJSON(project_dir, json_names => {
-        project_menu.innerHTML = '';
-        json_names.forEach(json_file => {
-            xhr = getXHR(function() {
-                if(this.readyState == 4) {
-                    if(this.status == 200) {
-                        jsons.push(JSON.parse(this.responseText));
-                        if(jsons.length == json_names.length) {
-                            jsons = sortJSONarr(jsons);
-                            jsons.forEach(json => {
-                                a = document.createElement('a');
-                                a.className = 'dropdown-item';
-                                a.href = json['project-page-link'];
-                                a.textContent = json['project-title'];
-                                project_menu.appendChild(a);
-                            });
+    var xhr, a, jsons = [], json_names, projectConfig, configXHR;
+    configXHR = getXHR(function() {
+        if(this.readyState == 4) {
+            if(this.status == 200) {
+                projectConfig = JSON.parse(this.responseText);
+                json_names = projectConfig[project_dir];
+                project_menu.innerHTML = '';
+                json_names.forEach(json_file => {
+                    xhr = getXHR(function() {
+                        if(this.readyState == 4) {
+                            if(this.status == 200) {
+                                jsons.push(JSON.parse(this.responseText));
+                                if(jsons.length == json_names.length) {
+                                    jsons.forEach(json => {
+                                        a = document.createElement('a');
+                                        a.className = 'dropdown-item';
+                                        a.href = json['project-page-link'];
+                                        a.textContent = json['project-title'];
+                                        project_menu.appendChild(a);
+                                    });
+                                }
+                            }
                         }
-                    }
-                }
-            });
-            xhr.open('GET', project_dir + '/' + json_file, true);
-            xhr.send();
-        });
+                    });
+                    xhr.open('GET', project_dir + '/' + json_file, true);
+                    xhr.send();
+                });
+            }
+        }
     });
+    configXHR.open('GET', 'project-config.json', true);
+    configXHR.send();
 }
