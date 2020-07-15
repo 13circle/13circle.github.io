@@ -1,0 +1,60 @@
+body {
+  padding-top: 56px;
+  position: relative;
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.opacityBackground {
+  background-color: black;
+  width: 100%; height: 100%;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.avatar {
+  max-width: 13em;
+  max-height: 13em;
+}
+
+.to-top {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  position: fixed;
+  top: 90%; left: 90%;
+  border: 2px solid black;
+  border-radius: 100%;
+  display: none;
+}
+.to-top img {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.anchor-to {
+  height: 5vw;
+}
+
+.follow-btn > a * {
+  width: 32px;
+  height: 32px;
+}
+
+.tech-img {
+  width: 10em;
+}
