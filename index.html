@@ -5,102 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <!-- Bootstrap -->
+  <link rel="icon" href="https://avatars1.githubusercontent.com/u/25195384?s=460&v=4">
+
+  <!-- Bootstrap -->
 	<link 
 		rel="stylesheet" 
 		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
 		crossorigin="anonymous">
-    <!-- Bootstrap -->
+  <!-- Bootstrap -->
 
-  <style>
-    body {
-      padding-top: 56px;
-    }
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
 
-    .carousel-item {
-      height: 65vh;
-      min-height: 300px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-
-    .portfolio-item {
-      margin-bottom: 30px;
-    }
-
-    .opacityBackground {
-      background-color: black;
-      width: 100%; height: 100%;
-      opacity: 0.45;
-      z-index: 0;
-    }
-  </style>
-
-  <title>Jooho Lee's Blog</title>
+  <title>Jooho Lee's Portfolio</title>
 </head>
-<body>
-    
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-          <a class="navbar-brand" href="index.html">Jooho's Dev Blog</a>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="services.html">Services</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Portfolio
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                          <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                          <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-                          <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-                          <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                          <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Blog
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                          <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                          <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                          <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Other Pages
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
-                          <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-                          <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-                          <a class="dropdown-item" href="faq.html">FAQ</a>
-                          <a class="dropdown-item" href="404.html">404</a>
-                          <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-                      </div>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+<body id="toTop">
 
+  <div template="navbar"></div>
+
+  <!-- Carousel Header -->
   <header>
     <div id="carouselIndicatorsContainer" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -113,25 +37,25 @@
           <a href="/">
             <div class="opacityBackground"></div>
           </a>
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Welcome to my blog!</h3>
+          <div class="carousel-caption d-md-block">
+            <h3>Welcome to my portfolio!</h3>
             <p>Nothing special, but concise.</p>
           </div>
         </div>
         <div class="carousel-item" style="background-image: url('https://hackernoon.com/drafts/98493332t.png')">
-          <a href="#myProjects">
+          <a href="#toMyProjects">
             <div class="opacityBackground"></div>
           </a>
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-md-block">
             <h3>Project Overviews</h3>
-            <p>See my projects on this blog & GitHub.</p>
+            <p>See my projects on this portfolio & GitHub.</p>
           </div>
         </div>
         <div class="carousel-item" style="background-image: url('https://logos-download.com/wp-content/uploads/2019/06/About_Me_Logo.png')">
-          <a href="#">
+          <a href="#toAbout">
             <div class="opacityBackground"></div>
           </a>
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-md-block">
             <h3>About</h3>
             <p>See my profile, contact information, etc.</p>
           </div>
@@ -151,169 +75,54 @@
   <!-- Page Content -->
   <div class="container">
 
-    <h1 class="my-4" id="myProjects">My Projects</h1>
+    <div id="toMyProjects" class="anchor-to"></div>
+    <h1 class="my-4">My Projects</h1>
 
-    <!-- Icon Section -->
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">LMSlecDownloader</h4>
-          <div class="card-body">
-            <p class="card-text">
-              명지대학교 LMS 강의 영상 다운로더
-              <br>
-              #Node.js #Puppeteer
-              <br>
-              <a href="https://github.com/13circle/LMSlecDownloader" target="_blank">To GitHub</a>
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-dark d-block">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">MJUcovidDiagnosisMacro</h4>
-          <div class="card-body">
-            <p class="card-text">
-              명지대학교 코로나 진단서 작성 매크로
-              <br>
-              #Node.js #Express #Puppeteer #귀차니즘
-              <br>
-              <a href="https://github.com/13circle/MJUcovidDiagnosisMacro" target="_blank">To GitHub</a>
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-dark d-block">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">MJUClassRoomRsvn</h4>
-          <div class="card-body">
-            <p class="card-text">
-              명지대학교 컴퓨터공학과 팀프로젝트1
-              <br>
-              #Android #Firebase #강의실_예약_시스템
-              <br>
-              <a href="https://github.com/13circle/MJUClassRoomRsvn" target="_blank">To GitHub</a>
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-dark d-block">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <!-- Icon Section -->
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">KidCapture</h4>
-          <div class="card-body">
-            <p class="card-text">
-              ICUNIX 2017 한이음 ICT 프로젝트
-              <br>
-              #Firebase #미완성 #제목_오해_금지
-              <br>
-              <a href="https://github.com/13circle/KidCapture" target="_blank">To GitHub</a>
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-dark d-block">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">저작권 무시 애니사이트</h4>
-          <div class="card-body">
-            <p class="card-text">
-              명지대학교 컴퓨터공학과 데이터베이스
-              <br>
-              #Tomcat #OracleDB #제목_오해_금지
-              <br>
-              <a href="https://github.com/13circle/mju-database-course-project" target="_blank">To GitHub</a>
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-dark d-block">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">택배보관소 관리 프로그램</h4>
-          <div class="card-body">
-            <p class="card-text">
-              어느 부대의 기반 택배물 관리 시스템
-              <br>
-              #VBScript #HTA #갈아넣은_군생활
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-dark d-block">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
+    <div class="project-card-list"></div>
 
     <!-- Features Section -->
     <div class="row">
-      <div class="col-lg-6">
-        <h2>About</h2>
-        <p>The Modern Business template by Start Bootstrap includes:</p>
-        <ul>
-          <li>
-            <strong>Bootstrap v4</strong>
-          </li>
-          <li>jQuery</li>
-          <li>Font Awesome</li>
-          <li>Working contact form with validation</li>
-          <li>Unstyled page elements for easy customization</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-      </div>
-      <div class="col-lg-6">
-        <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+      <div class="col w-100">
+        <br id="toAbout" class="anchor-to">
+        <h1 class="my-4">About</h1>
+        <div class="d-flex flex-row justify-content-center w-100">
+          <div class="text-center">
+            <a href="https://github.com/13circle" target="_blank">
+              <img class="avatar rounded-circle" src="https://avatars1.githubusercontent.com/u/25195384?s=460&v=4">
+            </a>
+            <h3 class="my-3">이주호 (Jooho Lee)</h3>
+            <h5 class="mb-3">13circle97@gmail.com</h5>
+            <a href="about.html">See profile</a>
+          </div>
+        </div>
       </div>
     </div>
     <!-- /.row -->
 
     <hr>
 
-    <!-- Call to Action Section -->
     <div class="row mb-4">
-      <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+      <div class="col-md-7 text-center d-flex flex-column justify-content-center">
+        <p>See more projects on GitHub</p>
       </div>
       <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+        <a class="btn btn-lg btn-info btn-block" href="https://github.com/13circle?tab=repositories" target="_blank">
+          <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+          &nbsp;
+          My GitHub Repo
+        </a>
       </div>
     </div>
 
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Jooho Lee's Dev Blog, 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+  <div template="footer"></div>
+
+  <span template="to-top-btn"></span>
 
   <!-- JQuery & Bootstrap JS -->
-  <script 
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-    crossorigin="anonymous">
-  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
   <script 
     src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
