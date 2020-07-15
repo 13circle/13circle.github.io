@@ -1,0 +1,16 @@
+<div class="text-center">
+    <img src="https://github.com/13circle/MJUClassRoomRsvn/blob/master/app/src/main/ic_launcher-web.png?raw=true" width="200" height="200">
+</div>
+
+2019년 2학기에 수강했던 전공 과목인 팀프로젝트1의 결과물이다.
+
+교내의 빈 강의실을 공강 시간에 맞게 활용할 수 있게 한 빈 강의실 예약 프로그램으로, Android와 Firebase를 이용하여 제작되었다.
+
+이 앱이 정말 웃긴 것이 뭐냐면, Red Black Tree를 Firebase Realtime Database의 JSON 트리 안에 구현했다는 점이다. 지금 생각해봐도 미친 짓이었다. 이 때 교수님께서 강조하셨던 부분이 자료구조의 활용이었기 때문에 그렇게 한 것인데, 백앤드 코드 없이 구현했다는 점에서 보안만 놓고 보았을 때는 최악의 어플리케이션이라고 할 수 있겠다.
+
+전역 후 첫 프로젝트 치고 너무나도 볼품이 없었기에 내 자신에게도 실망하고, 교수님도 실망하셔서 지고한 노력에도 불구하고 B+로 학기를 마쳤다. 기능은 중요하지 않고 자료구조가 중요하다고 하셨음에도 이에 충실하지 못했었기 때문이다.
+
+이 앱의 기능은 다음과 같다:
+
+<ol><li><strong>Firebase 인증을 통한 로그인</strong><p>Firebase를 못 쓰고 입대한 기억이 한이 되어 구현한 기능이다. 회원가입할 때 이메일 인증 기능도 있다.</p></li><li><strong>공강 시간대 강의실 검색</strong><p>공강 시간인 강의실을 검색하고, 이를 표시해준다. 이 검색 기능을 용이하게 하기 위해서 Firebase DB 내부에 Red Black Tree를 구현했다. 정말 쓸모없고 미친 짓이었다.</p></li><li><strong>공강 시간대 강의실 예약</strong><p>공강 시간대인 강의실을 예약하고, 후에 조회했을 때 이를 표시해준다.</p></li></ol>
+자세한 사항은 GitHub를 참고하기 바란다.
