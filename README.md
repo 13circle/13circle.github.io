@@ -1,3 +1,3 @@
 # 13circle.github.io
 
-Jooho Lee's Blog
+Jooho Lee's Portfolio
