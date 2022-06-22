@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/13circle/13circle.github.io#readme",
   "dependencies": {
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "fs": "0.0.1-security"
   }
 }
